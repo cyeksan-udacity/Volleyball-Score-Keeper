@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Volleyball Score Keeper</string>
+    <string name="zero">0</string>
+    <string name="result">RESULTS: </string>
+    <string name="sendResults">SEND RESULTS</string>
+    <string name="reset">RESET</string>
+    <string name="teamA">Team A</string>
+    <string name="teamB">Team B</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="ball">https://goo.gl/qtf84T</string>
+    <string name="congrats">http://gph.to/2GPqkXm</string>
+
+</resources>

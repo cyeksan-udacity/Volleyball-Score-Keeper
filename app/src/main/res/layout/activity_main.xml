@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Black"
+        android:orientation="vertical"
+        tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/ball"
+            android:src="@drawable/volleyball_ball" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Black"
+            android:orientation="horizontal"
+            tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+            <EditText
+                android:id="@+id/enter_name_A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="Name (max 5 ch.)"
+                android:inputType="textCapCharacters"
+                android:maxLength="5"
+                android:textColor="@color/textColor" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor"></View>
+
+            <EditText
+                android:id="@+id/enter_name_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="Name (max 5 ch.)"
+                android:inputType="textCapCharacters"
+                android:maxLength="5"
+                android:textColor="@color/textColor" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/viewDim"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/viewColor"></View>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:background="@color/viewColor"></View>
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/lightBlack"
+                android:gravity="center_horizontal"
+                android:text="@string/zero"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/bigTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor">
+
+            </View>
+
+            <TextView
+                android:id="@+id/set_team_A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/teamAColor"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/halfPadding"
+                android:paddingRight="@dimen/halfPadding"
+                android:text="@string/zero"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor"></View>
+
+            <TextView
+                android:id="@+id/set_team_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/teamBColor"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/halfPadding"
+                android:paddingRight="@dimen/halfPadding"
+                android:text="@string/zero"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor">
+
+            </View>
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/lightBlack"
+                android:gravity="center_horizontal"
+                android:text="@string/zero"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/bigTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@color/viewColor">
+
+            </View>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/viewDim"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@color/viewColor"></View>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin"
+                android:background="@color/viewColor"></View>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/teamAColor"
+                android:gravity="center_horizontal"
+                android:onClick="incrementTeamA"
+                android:text="@string/plus"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/bigTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor">
+
+            </View>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/teamAColor"
+                android:gravity="center_horizontal"
+                android:onClick="decrementTeamA"
+                android:text="@string/minus"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/bigTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor">
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/Black"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/halfPadding"
+                android:paddingRight="@dimen/halfPadding"
+                android:text="@string/zero"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/mediumTextSize" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/Black"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/halfPadding"
+                android:paddingRight="@dimen/halfPadding"
+                android:text="@string/zero"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor">
+
+            </View>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/teamBColor"
+                android:gravity="center_horizontal"
+                android:onClick="incrementTeamB"
+                android:text="@string/plus"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/bigTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:background="@color/viewColor">
+
+            </View>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/teamBColor"
+                android:gravity="center_horizontal"
+                android:onClick="decrementTeamB"
+                android:text="@string/minus"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/bigTextSize" />
+
+            <View
+                android:layout_width="@dimen/viewDim"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:background="@color/viewColor">
+
+            </View>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/viewDim"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/viewColor"></View>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:background="@color/Black"
+            android:orientation="vertical"
+            tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewDim"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@color/viewColor"></View>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:background="@color/viewColor"></View>
+
+                <TextView
+                    android:id="@+id/name_team_A"
+                    android:layout_width="@dimen/teamWidth"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlack"
+                    android:paddingLeft="@dimen/halfPadding"
+                    android:text="@string/teamA"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin"
+                    android:orientation="horizontal"
+                    tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+                    <TextView
+                        android:id="@+id/set5_A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+
+                    <TextView
+                        android:id="@+id/set4_A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+
+                    <TextView
+                        android:id="@+id/set3_A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        android:id="@+id/set2_A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        android:id="@+id/set1_A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <View
+                        android:layout_width="@dimen/viewDim"
+                        android:layout_height="match_parent"
+                        android:background="@color/viewColor"></View>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:background="@color/viewColor"></View>
+
+                <TextView
+                    android:layout_width="@dimen/teamWidth"
+                    android:layout_height="@dimen/pbHeight"
+                    android:background="@color/lightBlack" />
+
+                <ProgressBar
+                    android:id="@+id/progress5"
+                    style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pbHeight"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlack"
+                    android:max="100"
+                    android:progress="0" />
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlack"></View>
+
+                <ProgressBar
+                    android:id="@+id/progress4"
+                    style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pbHeight"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlack"
+                    android:max="100"
+                    android:progress="0" />
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlack"></View>
+
+                <ProgressBar
+                    android:id="@+id/progress3"
+                    style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pbHeight"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlack"
+                    android:max="100"
+                    android:progress="0" />
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlack"></View>
+
+                <ProgressBar
+                    android:id="@+id/progress2"
+                    style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pbHeight"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlack"
+                    android:max="100"
+                    android:progress="0" />
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlack"></View>
+
+                <ProgressBar
+                    android:id="@+id/progress1"
+                    style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlack"
+                    android:max="100"
+                    android:progress="0" />
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:background="@color/viewColor"></View>
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+                <View
+                    android:layout_width="@dimen/viewDim"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:background="@color/viewColor"></View>
+
+
+                <TextView
+                    android:id="@+id/name_team_B"
+                    android:layout_width="@dimen/teamWidth"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlack"
+                    android:paddingLeft="@dimen/halfPadding"
+                    android:text="@string/teamB"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin"
+                    android:orientation="horizontal"
+                    tools:context="com.example.android.volleyballscorekeeper.MainActivity">
+
+                    <TextView
+                        android:id="@+id/set5_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        android:id="@+id/set4_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+
+                    <TextView
+                        android:id="@+id/set3_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        android:id="@+id/set2_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        android:id="@+id/set1_B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@color/lightBlack"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <View
+                        android:layout_width="@dimen/viewDim"
+                        android:layout_height="match_parent"
+                        android:background="@color/viewColor"></View>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewDim"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@color/viewColor"></View>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@color/lightBlack"
+            android:onClick="resetGame"
+            android:text="@string/reset"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

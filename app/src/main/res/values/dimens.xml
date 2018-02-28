@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="halfPadding">8dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="half_margin">8dp</dimen>
+    <dimen name="pbHeight">6dp</dimen>
+    <dimen name="viewDim">1dp</dimen>
+    <dimen name="teamWidth">115dp</dimen>
+    <dimen name="teamWidthPop">80dp</dimen>
+    <dimen name="bigTextSize">48sp</dimen>
+    <dimen name="mediumTextSize">30sp</dimen>
+    <dimen name="smallTextSize">22sp</dimen>
+    <dimen name="big_text_size_pop">22sp</dimen>
+    <dimen name="medium_text_size_pop">18sp</dimen>
+    <dimen name="small_text_size_pop">12sp</dimen>
+
+
+</resources>
