@@ -1,3 +1,5 @@
+[![Volleyball Score Keeper](https://img.youtube.com/vi/Qr8Pkd8RliA/0.jpg)](https://www.youtube.com/watch?v=Qr8Pkd8RliA)
+
 PROJECT LICENSE
 
 This project was submitted by Cansu Yeksan Aktas as part of the Android Basics Nanodegree At Udacity.
